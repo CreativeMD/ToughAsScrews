@@ -1,0 +1,15 @@
+[
+{
+  "modid": "toughasscrews",
+  "name": "ToughAsScrews",
+  "description": "",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["CreativeMD"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": ["dynmap"]
+}
+]
