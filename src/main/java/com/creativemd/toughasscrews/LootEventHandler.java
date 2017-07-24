@@ -14,7 +14,10 @@ public class LootEventHandler {
 	@SubscribeEvent
     public void onLootTableLoad(LootTableLoadEvent event)
     {
-		if (!event.getName().equals(LootTableList.CHESTS_NETHER_BRIDGE))
+		if (event.getName().equals(LootTableList.CHESTS_SIMPLE_DUNGEON) || event.getName().equals(LootTableList.CHESTS_VILLAGE_BLACKSMITH)
+				 || event.getName().equals(LootTableList.CHESTS_ABANDONED_MINESHAFT) || event.getName().equals(LootTableList.CHESTS_STRONGHOLD_LIBRARY)
+				 || event.getName().equals(LootTableList.CHESTS_STRONGHOLD_CROSSING)|| event.getName().equals(LootTableList.CHESTS_STRONGHOLD_CORRIDOR)
+				 || event.getName().equals(LootTableList.CHESTS_DESERT_PYRAMID) || event.getName().equals(LootTableList.CHESTS_JUNGLE_TEMPLE))
 		{
             LootPool main = event.getTable().getPool("main");
             if (main != null)
