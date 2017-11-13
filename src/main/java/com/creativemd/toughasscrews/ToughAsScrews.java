@@ -11,6 +11,8 @@ import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerAboutToStartEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import toughasnails.core.ToughAsNails;
@@ -28,6 +30,13 @@ public class ToughAsScrews {
 	public static Item lifeblood_crystal_weak;
 	
 	public static int weakCrystalMaxHeal = 12;
+	
+	@EventHandler
+	public void serverStart(FMLServerStartingEvent event)
+	{
+		event.registerServerCommand(new CommandSpread());
+		event.registerServerCommand(new CommandSpreadAll());
+	}
 	
 	@EventHandler
     public void preInit(FMLPreInitializationEvent event)
